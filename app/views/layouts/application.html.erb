@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Funnytube</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="top-sitemap text-left">
+                <span>Welcome Back!</span>
+                <span> <a href="signin.html"><i class="fa fa-lock"></i> Sign In</a></span>
+                <span><a href="register.html"><i class="fa fa-user"></i> Register</a></span>
+              </div><!-- /.top-sitemap -->
+            </div>
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </div><!-- /.header-top -->
+
+      <div class="header-middle">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="navbar-brand hidden-xs"><a href="./"><img src="assets/logo.png" alt="Site Logo" class="site-logo"></a></div>
+            </div>
+          </div>
+        </div>
+      </div><!-- /.header-middle -->
+    </header><!-- /.header -->
+    <%= yield %>
+  </body>
+</html>
