@@ -7,10 +7,10 @@
           <div class="col-sm-8">
             <div class="about-author">
               <div class="upload-video">
-                <%= form_for @video, html: {class: 'upload-form' } do |f| %>
+                <%= form_for @share_video, html: {class: 'upload-form' } do |f| %>
                   <p class="form-element">
-                    <%= f.label :link %>
-                    <%= f.text_field :link, class:'title form-control', required: true %>
+                    <%= f.label :video_url %>
+                    <%= f.text_field :video_url, class:'title form-control', required: true %>
                   </p>
                   <%= f.submit class: 'submit' %>
                 <% end %>

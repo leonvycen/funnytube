@@ -17,7 +17,7 @@
             <div class="col-sm-6">
               <div class="top-sitemap text-left">
                 <% if logged_in? %>
-                  <span><i class="fa fa-user"></i> Hello, <%= current_user.email %></span>
+                  <span><i class="fa fa-user"></i><%= current_user.email %></span>
                   <span><a href="/signout" data-method='delete'><i class="fa fa-lock"></i> Sign Out</a></span>
                 <% else %>
                   <span> <a href="/signin"><i class="fa fa-lock"></i> Sign In</a></span>
@@ -38,6 +38,51 @@
           </div>
         </div>
       </div><!-- /.header-middle -->
+      <div class="header-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-7">
+              <nav class="navbar navbar-default">
+                <div class="navbar-header visible-xs">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+                    <i class="fa fa-bars"></i>
+                  </button>
+                  <a class="navbar-brand" href="./"><img src="images/logo.png" alt="Logo"></a>
+                </div>
+
+                <div id="menu" class="main-menu collapse navbar-collapse pull-left">
+
+                  <ul class="nav navbar-nav">
+
+                    <li class="menu-item active">
+                      <a href="/">Home</a>
+                    </li>
+
+                    <li class="menu-item menu-item-has-children">
+                      <a href="#">Categories</a>
+                      <ul class="sub-menu children">
+                        <li><a href="#">Funny</a></li>
+                        <li><a href="#">Sport</a></li>
+                        <li><a href="#">Food</a></li>
+                        <li><a href="#">Travel</a></li>
+                      </ul>
+                    </li>
+                    <% if logged_in? %>
+                      <li class="menu-item menu-item-has-children">
+                        <a href="#">My account</a>
+                        <ul class="sub-menu children">
+                          <li><a href="/">Profile Videos</a></li>
+                          <li><a href="share_videos/new">Share Video</a></li>
+                        </ul>
+                      </li>
+                    <% end %>
+                  </ul>
+                </div><!-- /.navbar-collapse -->
+              </nav><!-- /.navbar -->
+            </div>
+          </div>
+        </div><!-- /.container -->
+      </div><!-- /.header-bottom -->
     </header><!-- /.header -->
     <%= yield %>
   </body>
