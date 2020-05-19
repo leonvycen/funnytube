@@ -1,0 +1,24 @@
+<section class="author-page-contents">
+  <div class="section-padding">
+    <div class="container">
+      <div class="author-contents">
+        <div class="row">
+          <h2 class="section-title">Share Video</h2><!-- /.section-title -->
+          <div class="col-sm-8">
+            <div class="about-author">
+              <div class="upload-video">
+                <%= form_for @video, html: {class: 'upload-form' } do |f| %>
+                  <p class="form-element">
+                    <%= f.label :link %>
+                    <%= f.text_field :link, class:'title form-control', required: true %>
+                  </p>
+                  <%= f.submit class: 'submit' %>
+                <% end %>
+              </div><!-- /.upload-video -->
+            </div><!-- /.about-author -->
+          </div>
+        </div>
+      </div>
+    </div><!-- /.container -->
+  </div><!-- /.section-padding -->
+</section><!-- /.author-page-contents -->
