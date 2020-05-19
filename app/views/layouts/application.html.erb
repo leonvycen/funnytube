@@ -16,9 +16,13 @@
           <div class="row">
             <div class="col-sm-6">
               <div class="top-sitemap text-left">
-                <span>Welcome Back!</span>
-                <span> <a href="/signin"><i class="fa fa-lock"></i> Sign In</a></span>
-                <span><a href="/signup"><i class="fa fa-user"></i> Register</a></span>
+                <% if logged_in? %>
+                  <span><i class="fa fa-user"></i> Hello, <%= current_user.email %></span>
+                  <span><a href="/signout" data-method='delete'><i class="fa fa-lock"></i> Sign Out</a></span>
+                <% else %>
+                  <span> <a href="/signin"><i class="fa fa-lock"></i> Sign In</a></span>
+                  <span><a href="/signup"><i class="fa fa-user"></i> Register</a></span>
+                <% end %>
               </div><!-- /.top-sitemap -->
             </div>
           </div><!-- /.row -->

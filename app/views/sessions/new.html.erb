@@ -2,19 +2,21 @@
   <div class="section-padding">
     <div class="right-panel">
       <h4>Have an account? Sign in</h4>
-      <form class="sign-in-form" id="sign-in-form" action="/signin" method="post">
+      <%= form_for :session, html: {class: 'sign-in-form'} do |f| %>
         <p class="form-input name">
           <input type="text" name="email" id="user_login" class="input form-control" value="" placeholder="Email" required/>
         </p>
         <p class="form-input pswd">
           <input type="password" name="password" id="user_pass" class="input form-control" value="" placeholder="Password" required/>
         </p>
+        <% unless @error_msg.blank? %>
+          <p><%= @error_msg %></p>
+        <% end %>
         <p class="submit-input">
           <input type="submit" name="wp-submit" id="wp-submit" class="btn" value="Log In Now" />
         </p>
-      </form>
+      <% end %>
     </div><!-- /.right-panel -->
-
     <span class="bottom-text">
       Don’t Have an Account? <a href="signup.html">Sign Up</a>
     </span>
