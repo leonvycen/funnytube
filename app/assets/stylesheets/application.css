@@ -22,3 +22,9 @@
  *= require responsive
  *= require_self
  */
+
+span.logo-text {
+  font-size: 32pt;
+  color: #4d2e2c;
+  font-weight: bolder;
+}

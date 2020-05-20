@@ -6,7 +6,9 @@ Rails.application.routes.draw do
     get 'videos', on: :member
   end
 
-  resources :share_videos, only: %i[new create]
+  resources :share_videos, only: %i[new create] do
+    get 'my_videos', on: :collection
+  end
   get 'signin', to: 'sessions#new'
   post 'signin', to: 'sessions#create'
   delete 'signout', to: 'sessions#signout'

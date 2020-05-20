@@ -10,12 +10,12 @@
 
       	$('.carousel.slide').carousel({
       		cycle: true
-      	}); 
-      }, 
+      	});
+      },
 
       matchHeight: function() {
-      	$('article.post.type-post, .widget_instagram_feed img').matchHeight({ 
-      		property: 'min-height' 
+      	$('article.post.type-post, .widget_instagram_feed img').matchHeight({
+      		property: 'min-height'
       	});
 
       },
@@ -37,10 +37,10 @@
 
       },
 
-		// Owl Carousels 
+		// Owl Carousels
 
 		owlcarousel: function() {
-			try { 
+			try {
 				(function($) {
 
 					$(".video-slider").owlCarousel({
@@ -382,9 +382,9 @@
 					});
 
 				})(jQuery);
-			} catch(e) { 
-				
-			} 
+			} catch(e) {
+
+			}
 		},
 
 		// Facebook Profile Badge Script
@@ -471,18 +471,18 @@
 	if ($(window).width() < 767) {
 		"use strict";
 		$('.menu-item-has-children>a').on('click', function(event) {
-			event.preventDefault(); 
-			event.stopPropagation(); 
+			event.preventDefault();
+			event.stopPropagation();
 			$(this).parent().siblings().removeClass('open');
 			$(this).parent().toggleClass('open');
 		});
-		
+
 	};
 
 
 
 	jQuery(window).on('scroll', function () {
-		
+
 		'use strict';
 
 		if (jQuery(this).scrollTop() > 100) {
@@ -495,7 +495,7 @@
 
 
 	jQuery('#scroll-to-top').on("click", function() {
-		
+
 		'use strict';
 
 		jQuery("html,body").animate({ scrollTop: 0 }, 1500);
@@ -513,7 +513,7 @@
 /* Working Contact Form Js
 -------------------------------------------------------------------*/
     // Email from Validation
-    jQuery('#submit').on("click", function(e){ 
+    jQuery('#submit').on("click", function(e){
 
     //Stop form submission & check the validation
     e.preventDefault();
@@ -522,8 +522,8 @@
     // Variable declaration
     var error = false;
     var k_name = jQuery('#name').val();
-    var k_email = jQuery('#email').val(); 
-    var k_email = jQuery('#subject').val(); 
+    var k_email = jQuery('#email').val();
+    var k_email = jQuery('#subject').val();
     var k_message = jQuery('#message').val();
 
 
@@ -537,7 +537,7 @@
           //$('#email').remove();
           //$('#subject').remove();
           //$('#message').remove();
-          //$('#submit').remove(); 
+          //$('#submit').remove();
 
           $('.contact-message').html('<i class="fa fa-check contact-success"></i><div>Your message has been sent.</div>').fadeIn();
       } else {
@@ -546,9 +546,4 @@
       }
   });
 
-}); 
-
-
-
-
-
+});

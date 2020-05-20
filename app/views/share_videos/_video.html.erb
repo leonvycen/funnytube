@@ -1,18 +1,16 @@
 <div class="col-sm-6">
   <article class="post type-post">
     <div class="entry-thumbnail">
-      <img src="https://i.vimeocdn.com/video/614933078.jpg?mw=1920&mh=1080" alt="Item Thumbnail">
-      <a href="https://vimeo.com/201203170" class="iframe">
-        <span class="play-video"><i class="fa fa-play-circle-o"></i></span>
-      </a>
+      <%= link_to image_tag("https://img.youtube.com/vi/#{video.uid}/mqdefault.jpg", alt: video.title,
+                            class: 'img-rounded'),
+                  "https://www.youtube.com/watch?v=#{video.uid}", target: '_blank' %>
     </div><!-- /.entry-thumbnail -->
     <div class="entry-content">
-      <h2 class="entry-title"><a href="video-03.html">Chris Pratt and Jennifer Lawrence Answer the Internet's Most Asked Questions</a></h2><!-- /.entry-title -->
+      <h2 class="entry-title"><%= video.title %></h2>
       <div class="entry-meta">
-        <span class="author"><a href="#">VideoBlogger</a></span><!-- /.author -->
-        <span><i class="fa fa-clock-o"></i> <time datetime="PT5M">5 months</time></span>
-        <span><a href="#"><i class="fa fa-comment-o"></i> <span class="count">351</span></a></span>
-        <span><i class="fa fa-eye"></i> <span class="count">17,989</span></span>
+        <span><i class="fa fa-clock-o"></i> <time datetime="PT5M"><%= video.published_at.strftime('%-d %B %Y') %></time></span>
+        <span><i class="glyphicon glyphicon glyphicon-thumbs-up"></i> <span class="count"><%= video.likes %></span></span>
+        <span><i class="glyphicon glyphicon glyphicon-thumbs-down"></i> <span class="count"><%= video.dislikes %></span></span>
       </div><!-- /.entry-meta -->
     </div><!-- /.entry-content -->
   </article><!-- /.post -->

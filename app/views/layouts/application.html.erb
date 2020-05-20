@@ -7,6 +7,8 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://www.google.com/jsapi"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
   </head>
 
   <body>
@@ -33,11 +35,12 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-3">
-              <div class="navbar-brand hidden-xs"><a href="./"><img src="assets/logo.png" alt="Site Logo" class="site-logo"></a></div>
+              <div class="navbar-brand hidden-xs"><a href="/"><span class="logo-text">FunnyTUBE</span></a></div>
             </div>
           </div>
         </div>
       </div><!-- /.header-middle -->
+
       <div class="header-bottom">
         <div class="container">
           <div class="row">
@@ -47,7 +50,6 @@
                   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
                     <i class="fa fa-bars"></i>
                   </button>
-                  <a class="navbar-brand" href="./"><img src="images/logo.png" alt="Logo"></a>
                 </div>
 
                 <div id="menu" class="main-menu collapse navbar-collapse pull-left">
@@ -71,8 +73,8 @@
                       <li class="menu-item menu-item-has-children">
                         <a href="#">My account</a>
                         <ul class="sub-menu children">
-                          <li><a href="/">Profile Videos</a></li>
-                          <li><a href="share_videos/new">Share Video</a></li>
+                          <li><%= link_to "My Videos", my_videos_share_videos_url %></li>
+                          <li><%= link_to "Share Video", new_share_video_url %></li>
                         </ul>
                       </li>
                     <% end %>

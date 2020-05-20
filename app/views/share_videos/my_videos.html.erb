@@ -2,10 +2,10 @@
   <div class="section-padding">
     <div class="container">
       <div class="row">
-        <h2 class="section-title">Latest Videos</h2><!-- /.section-title -->
+        <h2 class="section-title">My Videos</h2><!-- /.section-title -->
         <div id="player-wrapper"></div>
         <% @videos.each do |video| %>
-          <%= render partial: 'share_videos/video', locals: {video: video} %>
+          <%= render partial: 'video', locals: {video: video} %>
         <% end %>
       </div>
     </div><!-- /.container -->

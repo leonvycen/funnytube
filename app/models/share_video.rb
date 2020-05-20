@@ -3,6 +3,9 @@ class ShareVideo < ApplicationRecord
 
   before_save :info_from_yt
 
+  YT_LINK_FORMAT = /\A.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/i
+  validates :video_url, presence: true, format: YT_LINK_FORMAT
+
   def info_from_yt
     video = Yt::Video.new url: video_url
     if video

@@ -7,9 +7,8 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
-require("themes/main")
-require("themes/modernizr.custom")
-require("themes/plugins")
+require('jquery')
+require('themes/yt')
 
 // import '../css/main.scss'
 // import "@fortawesome/fontawesome-free/js/all";
