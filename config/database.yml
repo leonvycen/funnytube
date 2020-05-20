@@ -14,7 +14,7 @@ default: &default
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
-  password: 
+  password:
   socket: /tmp/mysql.sock
 
 development:
@@ -48,7 +48,4 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: funnytube_production
-  username: funnytube
-  password: <%= ENV['FUNNYTUBE_DATABASE_PASSWORD'] %>
+    url: <%= ENV['DATABASE_URL'] %>
