@@ -10,13 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_17_132612) do
+ActiveRecord::Schema.define(version: 2020_05_20_060314) do
 
   create_table "share_videos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "video_url"
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "uid"
+    t.string "title"
+    t.integer "likes"
+    t.integer "dislikes"
+    t.datetime "published_at"
     t.index ["user_id"], name: "index_share_videos_on_user_id"
   end
 
